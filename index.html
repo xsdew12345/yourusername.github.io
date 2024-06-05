@@ -10,15 +10,25 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            color: #333;
         }
         .header {
-            background-color: #0044cc;
+            background: linear-gradient(135deg, #0044cc, #0066ff);
             color: white;
             padding: 20px 0;
             text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .header p {
+            margin: 5px 0 0;
+            font-size: 1.2em;
         }
         .content {
-            padding: 20px;
+            padding: 40px 20px;
             margin: auto;
             max-width: 1000px;
             display: flex;
@@ -27,8 +37,8 @@
         }
         .card {
             background-color: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
             margin: 20px;
             padding: 20px;
             width: 100%;
@@ -37,6 +47,11 @@
             transform: translateY(20px);
             animation: fadeInUp 1s ease-out forwards;
             cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(0);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
         }
         .photo {
             text-align: center;
@@ -45,7 +60,7 @@
         .photo img {
             max-width: 100%;
             height: auto;
-            border-radius: 10px;
+            border-radius: 15px;
             opacity: 0;
             transform: scale(0.9);
             animation: fadeIn 1s ease-out forwards;
@@ -53,23 +68,17 @@
         .section-title {
             color: #0044cc;
             margin-top: 20px;
+            font-size: 1.8em;
             opacity: 0;
             transform: translateY(20px);
             animation: fadeInUp 1s ease-out forwards;
         }
-        .section-text {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 1s ease-out forwards;
-        }
-
         @keyframes fadeIn {
             to {
                 opacity: 1;
                 transform: scale(1);
             }
         }
-
         @keyframes fadeInUp {
             to {
                 opacity: 1;
